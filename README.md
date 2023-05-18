@@ -3,9 +3,10 @@
 ## 📋 DATOS GENERALES
 
 <ul>
-  <li><b>Cliente:</b> 🦷 Clinica Odontologia Dr. Ayora</li>
-  <li><b>Fecha de inicio:</b> 📅 11/03/2023</li>
-  <li><b>Fecha de entrega:</b> 📅 24/03/2023</li>
+  <li><b>Nombre:</b> 🕹️ API de servicios ISP</li>
+  <li><b>Cliente:</b> 🦷 Xavier Bermeo</li>
+  <li><b>Fecha de inicio:</b> 📅 18/05/2023</li>
+  <li><b>Fecha de entrega:</b> 📅 --/05/2023</li>
   <li><b>Estado:</b> 🚧 En desarrollo</li>
   <li><b>Version:</b> 🚀 1.0.0</li>
 </ul>
@@ -13,47 +14,33 @@
 ## 📋 DESCRIPCION
 
 <p>
-  🦷 La aplicación web ha sido diseñada específicamente para la Clínica Odontológica del Dr. David Ayora y el Dr. Claudio Ayora. Su propósito principal es proporcionar información sobre la clínica y sus servicios, además de ofrecer una funcionalidad especial para la gestión de citas médicas.
-  <br>
-  <br>
-  💻 La aplicación web ha sido desarrollada por Ideasoft utilizando diversas tecnologías, incluyendo PHP, HTML, JS, CSS, Apache y MySQL. Se ha creado un panel de administración para la gestión y actualización de la información de la página web de manera fácil e intuitiva.
-  <br>
-  <br>
-  📆 La funcionalidad de gestión de citas médicas permite a los pacientes solicitar citas en línea, lo que hace que el proceso sea más rápido y fácil. Los pacientes pueden seleccionar el tipo de tratamiento que necesitan, el día y la hora que les conviene, y recibir una confirmación inmediata de su cita.
-  <br>
-  <br>
-  🤝 La aplicación web es de código abierto y su uso es gratuito para cualquier persona o entidad que desee utilizarla. La aplicación puede ser modificada y distribuida libremente, siempre y cuando se reconozca a Ideasoft como el desarrollador original de la aplicación.
-  <br>
-  <br>
-  💯 En resumen, la aplicación web desarrollada por Ideasoft es una solución eficaz para la Clínica Odontológica del Dr. David Ayora y el Dr. Claudio Ayora, que permite a los pacientes solicitar citas médicas en línea de manera fácil y rápida. La aplicación web también cuenta con un panel de administración intuitivo que permite a los administradores actualizar y gestionar la información de la página web de manera sencilla. La aplicación es de código abierto y se puede utilizar, modificar y distribuir libremente bajo los términos y condiciones de la licencia.
+  Nuestra API de servicios de ISP, desarrollada por Ideasoft, ofrece una solución centralizada para gestionar los procesos internos y compartir servicios de internet en distintos aplicativos. Esta API proporciona funciones y endpoints para administrar la configuración de los servicios, gestionar cuentas de usuario, obtener información de uso y consumo, realizar pagos y facturación, entre otras funcionalidades.
+  <br><br>
+  Con nuestra API, los desarrolladores pueden integrar de manera sencilla los servicios de internet de nuestro ISP en sus aplicaciones, mejorando la eficiencia y reutilizando funcionalidades existentes. Al unificar los procesos internos, facilitamos el desarrollo de aplicativos personalizados y optimizamos la calidad y consistencia de los servicios.
+  <br><br>
+  Nuestra API de servicios de ISP de Ideasoft es una herramienta poderosa que permite una integración eficiente y escalable de los servicios de internet en aplicaciones diversas. Simplificamos los procesos internos y ofrecemos una experiencia fluida para nuestros clientes y usuarios finales.
+  <br><br>
+  Simplifica el desarrollo de aplicaciones con nuestra API de servicios de ISP de Ideasoft y maximiza el valor de los servicios de internet para tus usuarios.
 </p>
 
 ## 📝 LICENCIA
 
 <p>
-  📝 Licencia de Código Abierto de la Aplicación Web desarrollada por Ideasoft para la Clínica Odontológica del Dr. David Ayora y el Dr. Claudio Ayora 🦷
+  MIT License
+  <br><br>
+  Derechos de autor (c) 2023 Ideasoft
+  <br><br>
+  Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia de este software y los archivos de documentación asociados (el "Software"), para utilizar el Software sin restricciones, incluyendo, entre otras, las siguientes acciones:
   <br>
-  <br>
-  Esta aplicación web es de código abierto y su uso está permitido a cualquier persona o entidad que desee utilizarla. Cualquier persona o entidad que desee utilizar esta aplicación web puede hacerlo de forma gratuita, sin limitaciones de uso, distribución o modificación, siempre y cuando se cumplan las siguientes condiciones:
-  <br>
-  <ol>
-    <li>🙏 Se debe reconocer a Ideasoft como el desarrollador original de la aplicación.</li>
-    <li>🛠️ Cualquier modificación realizada a la aplicación debe ser documentada y se debe proporcionar una notificación de los cambios realizados.</li>
-    <li>🤝 Si se desea distribuir la aplicación o cualquier parte de ella, se debe hacer bajo los mismos términos y condiciones que se mencionan en esta licencia.</li>
-  </ol>
-  <br>
-  La aplicación web desarrollada por Ideasoft para la Clínica Odontológica del Dr. David Ayora y el Dr. Claudio Ayora se proporciona "tal cual" y sin garantías de ningún tipo, ya sean expresas o implícitas, incluidas, entre otras, las garantías de comercialización, adecuación para un propósito particular y no infracción de derechos de terceros. En ningún caso, Ideasoft será responsable por ningún daño directo, indirecto, incidental, especial o consecuencial que surja de, o en relación con, el uso o la incapacidad de utilizar esta aplicación web.
-  <br>
-  <br>
-  En resumen, esta aplicación web es de código abierto y puede ser utilizada y modificada libremente por cualquier persona o entidad. Ideasoft no ofrece garantías y no se hace responsable de ningún daño que pueda surgir del uso de esta aplicación web. Si decides utilizar esta aplicación web, aceptas los términos y condiciones de esta licencia. 🤗
+  - Utilizar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender copias del Software.
+  - Permitir a las que se les proporcione el Software hacer lo mismo, de acuerdo con las condiciones establecidas en esta licencia.
+  <br><br>
+  El propietario del código fuente de este software es Ideasoft. Si bien esta versión específica del software es propiedad de Ideasoft, se permite utilizar el código fuente para otros propósitos sin restricciones, siempre y cuando se cumplan los términos de esta licencia.
+  <br><br>
+  EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE COMERCIABILIDAD, ADECUACIÓN PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O PROPIETARIOS DEL COPYRIGHT SERÁN RESPONSABLES DE NINGÚN RECLAMO, DAÑO U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O CUALQUIER OTRO MOTIVO, DERIVADO DE, FUERA DE O EN RELACIÓN CON EL SOFTWARE O EL USO U OTROS TRATOS EN EL SOFTWARE.
 </p>
 
 # 📦 DOCUMENTACION DE INSTALACION
-
-## ⚙️ INSTALACION AUTOMATICA CON .PS1
-
-Ejecutalo con powershell
-<a href="./src/assets/install_win.rar">Descargar archivo 📥</a>
 
 ## 📄 VARIABLES DE ENTORNO
 
@@ -62,6 +49,7 @@ Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
 ```env
   # PROJECT
   HTTP_DOMAIN = {{YOUR_DOMAIN}}
+  APP_NAME = {{YOUR_APP_NAME}}
 
   # MYSQLI
   DB_HOST = {{YOUR_DB_HOST}}
@@ -69,6 +57,12 @@ Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
   DB_PASS = {{YOUR_DB_PASS}}
   DB_NAME = {{YOUR_DB_NAME}}
   DB_PORT =  {{YOUR_DB_PORT}}
+
+  # MIKROWISP
+  MKW_API_VERSION = {{YOUR_MIKROWISP_VERSION}} # Esta diseñado para la version 5 y 6 de la MIKROWISP
+  MKW_API_URL = {{YOUR_MIKROWISP_URL}}
+  MKW_API_USER = {{YOUR_MIKROWISP_USER}} # si la version de la API es 6, este campo no es necesario
+  MKW_API_PASS = {{YOUR_MIKROWISP_PASS}} # Si la version de la API es 6, este campo es el token
 ```
 
 ## 🐬 MYSQL
