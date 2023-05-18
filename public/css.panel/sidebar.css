@@ -1,0 +1,53 @@
+.sidebar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .burguer-button {
+    position: absolute;
+    left: 100%;
+    width: 50px;
+    height: var(--header-height);
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sidebar .burguer-button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--header-height);
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+/*    padding: 10px;*/
+}
+
+.sidebar {
+}
+
+.sidebar .logo {
+    aspect-ratio: 1/1;
+    margin: 20px auto;
+    margin-top: 25px;
+    width: 100%;
+    max-width: 100px;
+    padding: 10px;
+}
+
+.sidebar .logo img {
+    border-radius: 50%;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

@@ -1,0 +1,223 @@
+header {
+    --header-height: 90px;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: var(--header-height);
+    padding: 0 20px;
+    /*    background: #ffffff;*/
+    background: rgba(255, 255, 255, 0.4);
+    ;
+    backdrop-filter: blur(10px);
+
+    /*    position: relative;*/
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header menu {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+header menu nav {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+header nav a.logo {
+    display: block;
+    height: 100%;
+    max-width: 240px;
+}
+
+header nav a.logo img {
+    height: 100%;
+}
+
+header nav ul {
+    flex:1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+        width: 100%;
+/*    min-width: 500px;*/
+    max-width: 600px;
+    height: 100%;
+}
+
+header nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+header nav a.link {
+    text-decoration: none;
+    color: #000;
+    margin: auto 0;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+header nav a.link span {
+    font-family: Nunito-Regular;
+    font-size: 18px;
+}
+
+header nav a.link:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: 7px;
+    height: 7px;
+    margin: auto;
+    border-radius: 50%;
+    background: #000000;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+header nav a.link:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+header nav a.link:hover:before {
+    opacity: 1;
+    transition: all 0.2s ease;
+}
+
+header nav a.link.button {
+    background: #a9def5;
+    border-radius: 10px;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+/*
+    font-weight: normal;
+    letter-spacing: 2px;
+*/
+}
+
+header nav a.link.button:hover {
+    background: #6bcd8d;
+/*    color: #ffffff;*/
+    transition: all 0.2s ease;
+}
+
+header nav a.link.button:hover:before {
+    display: none;
+}
+
+header nav a.link.active {
+    color: #24abe5;
+    pointer-events: none;
+}
+
+header nav a.link.active:hover {
+    transform: unset;
+}
+
+header nav a.link.active:before {
+    opacity: 1;
+    background: #24abe5;
+}
+
+header menu nav .burguer-menu,
+header nav ul li.movil {
+    display: none;
+}
+
+header menu nav .burguer-menu {
+    cursor: pointer;
+    font-size: 1em;
+    width: 70px;
+    background: transparent;
+}
+
+
+@media (max-width:900px) {
+
+    header nav a.link.button {
+        display: none;
+    }
+
+    header menu nav .burguer-menu,
+    header nav ul li.movil,
+    header nav ul li.movil a.link {
+        display: block;
+    }
+
+    header nav ul li.movil {
+        /*        background: red;*/
+        width: 100px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        width: 100%;
+        min-width: unset;
+        max-width: unset;
+        height: calc(100vh - var(--header-height));
+        max-height: 0;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.88);
+        transition: all 0.2s ease;
+    }
+
+    header nav ul li {
+        margin-left: -100%;
+    }
+
+    header nav ul li:nth-child(2n) {
+        margin-left: unset;
+        margin-right: -100%;
+        transition: all 0.2s ease;
+    }
+
+    header.open nav ul {
+        display: flex;
+        max-height: 100vh;
+        transition: all 0.2s ease;
+    }
+
+    header.open nav ul li {
+        margin-right: 0;
+        margin-left: 0;
+        transition: all 0.2s 0.05s ease;
+    }
+    
+    header {
+        transition: 0.2s 0.1s ease;
+    }
+    
+    header.open {
+        background: #fff;
+        transition: 0.2s 0.1s ease;
+    }
+
+    /*    open*/
+
+}

@@ -1,0 +1,248 @@
+
+
+/* SECCION SERVICIOS */
+section.servicios .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    margin: 40px 0;
+}
+
+section.servicios .container .item {
+    text-decoration: none;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+section.servicios .container .item img {
+    height: 100px;
+    width: 100%;
+    object-fit: contain;
+}
+
+section.servicios .container .item span {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Nunito-Regular;
+}
+
+
+@media (max-width: 900px) {
+    section.servicios .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    section.servicios .container .item img {
+        height: 50px;
+    }
+
+
+    section.servicios .container {
+        grid-gap: 10px;
+        grid-row-gap: 20px;
+    }
+}
+
+
+/* SECCION FILOSOFIA */
+section.filosofia {
+    position: relative;
+    margin: 190px 0;
+    background: #0099ff;
+}
+
+section.filosofia:before,
+section.filosofia:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 190px;
+    background-size: cover;
+}
+
+section.filosofia:before {
+    background-image: var(--url_bg_wave_top) !important;
+    bottom: 100%;
+}
+
+section.filosofia:after {
+    background-image: var(--url_bg_wave_bottom) !important;
+    top: 100%;
+}
+
+section.filosofia .container {
+    max-width: 1000px;
+}
+
+section.filosofia .container h2 {
+    text-align: center;
+    margin: 20px 0;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: Nunito-Regular;
+    color: #213e6e;
+}
+
+section.filosofia .container .item {
+    display: flex;
+}
+
+section.filosofia .container .item p {
+    user-select: text;
+    flex: 1;
+    font-size: 20px;
+/*    letter-spacing: 2px;*/
+/*    font-weight: bold;*/
+    color: #fff;
+    font-family: Nunito-Regular;
+    text-align: justify;
+}
+
+section.filosofia .container .item .img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.filosofia .container .item img {
+    max-width: 200px;
+}
+
+section.filosofia .container .doctores {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+section.filosofia .container .doctores .item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+}
+
+section.filosofia .container .doctores .item img {
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.5);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+section.filosofia .container .doctores .item b {
+    font-size: 23px;
+    font-family: Nunito-Regular;
+}
+
+section.filosofia .container .doctores .item span {
+    font-size: 18px;
+    font-family: Nunito-Regular;
+}
+
+@media (max-width: 700px) {
+    section.filosofia .container .item p {}
+
+    section.filosofia .container .item .img {
+        display: none;
+    }
+
+    section.filosofia .container .doctores {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/*SECCION CONSULTA*/
+section.consultar {
+    padding-top: 50px;
+}
+
+section.consultar .container {}
+
+section.consultar h2 {
+    font-family: Nunito-Regular;
+    font-size: 25px;
+    text-align: center;
+}
+
+section.consultar .item {
+    display: flex;
+}
+
+section.consultar .item .img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+section.consultar .item .img img {
+    width: 100%;
+    max-width: 300px;
+}
+
+section.consultar .item .button {
+    flex: 1;
+    padding-top: 40px;
+}
+
+section.consultar .item a {
+    background: #46c071;
+    padding: 15px;
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.1s ease;
+    white-space: nowrap;
+}
+
+section.consultar .item a:hover {
+    background: transparent;
+    border: solid 2px #46c071;
+    color: #46c071;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease;
+}
+
+section.consultar .item a span {}
+
+section.consultar .item a i {}
+
+@media (max-width: 600px) {
+    section.consultar .item {
+        flex-direction: column-reverse;
+    }
+
+    section.consultar .item .img {
+        justify-content: flex-start;
+    }
+
+    section.consultar .item .button {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    section.consultar .item .button a {
+        font-size: 1.2em;
+    }
+}

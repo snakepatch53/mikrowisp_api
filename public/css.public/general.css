@@ -1,0 +1,67 @@
+@font-face {
+    src: url('./../font.general/Oregano-Regular.ttf');
+    font-family: Oregano-Regular;
+}
+
+@font-face {
+    src: url('./../font.general/Nunito-Regular.ttf');
+    font-family: Nunito-Regular;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    user-select: none;
+    outline: none;
+    border-style: none;
+    --max-width: 1300px;
+    --padding: 50px;
+    --header-height: 90px;
+}
+
+body {
+    overflow-X: hidden;
+}
+
+
+
+main {
+    min-height: 100vh;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+section .container {
+    flex: 1;
+    padding: 0 20px;
+    max-width: var(--max-width);
+}
+
+img {
+    pointer-events: none;
+}
+
+
+@media (max-width: 500px) {
+    * {
+        --padding: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    * {
+        --padding: 10px;
+    }
+}
+
+@media (max-width: 300px) {
+    * {
+        --padding: 5px;
+    }
+}

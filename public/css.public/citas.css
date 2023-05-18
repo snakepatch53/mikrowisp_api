@@ -1,0 +1,370 @@
+section.form {
+    position: relative;
+    padding: 0 20px;
+    padding-top: 150px;
+    padding-bottom: 40px;
+    background-image: var(--url_bg_citaform);
+    background-size: cover;
+    background-position: center;
+}
+
+section.form:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    backdrop-filter: blur(5px);
+}
+
+section.form .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 700px;
+    padding: 30px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+section.form .container .congratulations {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    border-radius: 20px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+section.form .container .congratulations.show {
+    opacity: 1;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+section.form .container .congratulations h2 {
+    margin: auto 0;
+    font-family: Nunito-Regular;
+    text-align: center;
+}
+section.form .container .congratulations p {
+    margin: 10px 0;
+    font-size: 17px;
+    font-family: Nunito-Regular;
+    text-align: center;
+}
+section.form .container .congratulations a {
+    text-decoration: none;
+    font-size: 18px !important;
+    margin: auto 0;
+    font-family: Nunito-Regular;
+    z-index: 100;
+}
+
+section.form .container form {
+    width: 100%;
+}
+
+/*FORMULARIO CLIENTE*/
+
+section.form .container form#citaform-cliente {
+    display: flex;
+    flex-direction: column;
+}
+
+section.form .container form#citaform-cliente .row {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+section.form .container form#citaform-cliente .row label {
+    font-family: Nunito-Regular;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 10px;
+    width: 100px;
+}
+
+section.form .container form#citaform-cliente .row .input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-family: Nunito-Regular;
+    background: rgba(179, 207, 232, 0.59);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+section.form .container form#citaform-cliente .row .input input {
+    flex: 1;
+    font-family: Nunito-Regular;
+    background: transparent;
+    font-size: 19px;
+}
+
+section.form .container form#citaform-cliente .row .input i {
+    font-size: 19px;
+}
+
+section.form .container form#citaform-cliente.show .autocomplete {
+    max-height: 100vh;
+    padding: 15px;
+    margin-top: 30px;
+    transition: all 0.2s ease;
+}
+
+section.form .container form#citaform-cliente .autocomplete {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+section.form .container form#citaform-cliente .autocomplete .col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+section.form .container form#citaform-cliente .autocomplete .row {
+    display: flex;
+}
+
+section.form .container form#citaform-cliente .autocomplete .row label {
+    width: 100px;
+    font-family: Nunito-Regular;
+    font-size: 17px;
+}
+
+section.form .container form#citaform-cliente .autocomplete .row input {
+    flex: 1;
+    font-family: Nunito-Regular;
+    border: solid 1px #ccc;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+
+/*FORMULARIO CITA*/
+
+section.form .container form#citaform-cita {
+    display: flex;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+    border-radius: 5px;
+    padding: 15px;
+    gap: 10px;
+}
+
+section.form .container form#citaform-cita .col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+section.form .container form#citaform-cita .col label {
+    font-family: Nunito-Regular;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+section.form .container form#citaform-cita .col img {
+    width: 100%;
+}
+
+section.form .container form#citaform-cita .col select {
+    font-family: Nunito-Regular;
+    border: solid 1px #ccc;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+section.form .container form#citaform-cliente .row .input.is-invalid,
+.calendar.is-invalid,
+section.form .container form#citaform-cliente .autocomplete .row input.is-invalid,
+section.form .container form#citaform-cita .col select.is-invalid {
+    border: solid 1px #af2525;
+}
+
+section.form .container form#citaform-cita .col select option {
+    font-size: 15px;
+}
+
+section.form .container .congratulations a,
+section.form .container button {
+    background: #46c071;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: solid 1px transparent;
+    transition: all 0.2s ease;
+}
+
+section.form .container .congratulations a:hover,
+section.form .container button:hover {
+    background: transparent;
+    color: #46c071;
+    border: solid 1px #46c071;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+section.form .container button span {}
+
+section.form .container button i {}
+
+
+@media (max-width: 700px) {
+
+    section.form .container form#citaform-cita,
+    section.form .container form#citaform-cliente .autocomplete {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    section.form .container form#citaform-cliente .row {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    section.form .container form#citaform-cliente .row input {
+        width: 100%;
+    }
+}
+
+
+
+/*SERVICIOS*/
+section.servicios {
+    padding: 100px 20px;
+}
+
+section.servicios .container {}
+
+section.servicios ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+section.servicios ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+section.servicios ul li img {
+    width: 100px;
+    object-fit: contain;
+}
+
+section.servicios ul li h3 {
+    font-family: Nunito-Regular;
+    font-size: 30px;
+    text-align: center;
+    width: 145px;
+}
+
+section.servicios ul li p {
+    flex: 1;
+    font-size: 18px;
+    color: #213e6e;
+    font-family: Nunito-Regular;
+    text-align: justify;
+    user-select: text;
+}
+
+.calendar {
+    position: relative;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.calendar.disabled:before {
+    cursor: no-drop;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+
+@media (max-width: 700px) {
+    section.servicios ul {
+        gap: 50px;
+    }
+
+    section.servicios ul li {
+        flex-direction: column;
+    }
+}
+
+#btn-send:disabled {
+    background: #ccc;
+    color: #000;
+    border: unset;
+    cursor: no-drop;
+}
+
+#btn-send:disabled:hover {
+    transform: unset;
+    background: #ccc;
+    color: #000;
+    box-shadow: unset;
+    border: unset;
+}
+
+#canvas-confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}

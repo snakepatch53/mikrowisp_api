@@ -1,0 +1,88 @@
+@font-face {
+    src: url('./../font.general/Oregano-Regular.ttf');
+    font-family: Oregano-Regular;
+}
+
+@font-face {
+    src: url('./../font.general/Nunito-Regular.ttf');
+    font-family: Nunito-Regular;
+}
+
+:root {
+    --primary_background: #ffffff;
+    --primary_background_hover: #e8e8e8;
+    --primary_color: #000000;
+    --primary_color_hover: #0f0f0f;
+    --secondary_background: #0378C0;
+    --secondary_background_hover: #0371b5;
+    --secondary_color: #ffffff;
+    --secondary_color_hover: #afafaf;
+    --tertiary_background: #ffffff;
+    --tertiary_background_hover: #ececec;
+    --tertiary_color: #131313;
+    --tertiary_color_hover: #000000;
+    --success: #19A15F;
+    --info: #427ad5;
+    --warnning: #FFCD42;
+    --error: #DD5145;
+}
+
+main {
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    user-select: none;
+    outline: none;
+    border-style: none;
+
+    --max-width: 1200px;
+    --padding: 50px;
+    --header-height: 90px;
+}
+
+img {
+    pointer-events: none;
+}
+
+@media (max-width: 500px) {
+    * {
+        --padding: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    * {
+        --padding: 10px;
+    }
+}
+
+@media (max-width: 300px) {
+    * {
+        --padding: 5px;
+    }
+}
+
+/* _____________ SCROLL _ STYLES ________________ */
+.scroll-style::-webkit-scrollbar {
+    width: 3px;
+    height: 5px;
+}
+
+.scroll-style::-webkit-scrollbar-thumb {
+    background: var(--primary_background);
+    border-radius: 7px;
+}
+
+.scroll-style::-webkit-scrollbar-thumb:hover {
+    background: var(--primary_background_hover);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-style::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}

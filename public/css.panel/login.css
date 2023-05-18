@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: var(--background-image-url) !important;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
+}
+
+#element-msg-login {
+    height: 50px;
+}
+
+.login-container {
+    box-shadow: 0 30px 50px -15px #000;
+    border-radius: 5px;
+}
+
+form .logo {
+    width: 100%;
+    max-width: 250px;
+}
+
+.modal-form {
+    background: rgba(255, 255, 255, 0.5);
+    max-width: 430px;
+    margin: auto;
+}

@@ -1,0 +1,35 @@
+header {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+section.historia {
+    margin-top: 100px;
+}
+
+section.historia .container {}
+
+section.historia h2,
+section.mision h3,
+section.vision h3 {
+    text-align: center;
+    margin: 50px 0;
+    color: #213e6e;
+    font-family: Nunito-Regular;
+    font-size: 30px;
+}
+
+section.mision h3,
+section.vision h3 {
+    font-size: 25px;
+    text-align: left;
+}
+
+section.historia p,
+section.mision p,
+section.vision p {
+    text-align: justify;
+    color: #213e6e;
+    font-family: Nunito-Regular;
+    font-size: 18px;
+    user-select: text;
+}

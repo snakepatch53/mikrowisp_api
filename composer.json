@@ -1,0 +1,20 @@
+{
+    "name": "harold/javierbermeo_api",
+    "autoload": {
+        "psr-4": {
+            "Harold\\javierbermeo_api\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "snakepatch53",
+            "email": "snakepatch53@gmail.com"
+        }
+    ],
+    "require": {
+        "bramus/router": "^1.6",
+        "endroid/qr-code": "^4.8",
+        "dompdf/dompdf": "^2.0",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
