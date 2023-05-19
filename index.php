@@ -22,6 +22,7 @@ require_once(__DIR__ . '/src/functions/middlewares.php');
 require_once('./src/dao/InfoDao.php');
 require_once('./src/dao/UserDao.php');
 require_once('./src/dao/ClientDao.php');
+require_once('./src/dao/ClientFileDao.php');
 
 // cargamos los objetos de acceso a API
 require_once('./src/api/ClientApi.php');
@@ -30,6 +31,7 @@ require_once('./src/api/ClientApi.php');
 require_once('./src/services/info.service.php');
 require_once('./src/services/user.service.php');
 require_once('./src/services/client.service.php');
+require_once('./src/services/client_file.service.php');
 
 // cargamos las variables de entorno
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);

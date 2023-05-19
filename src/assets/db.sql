@@ -16,7 +16,7 @@ VALUES
     (
         1,
         "Javier Bermeo API",
-        'frB2CYI@%CJlkOs@bqoS@8y16^T',
+        "frB2CYI@%CJlkOs@bqoS@8y16^T",
         "http://167.71.189.123/api/v1/",
         "MzBnNDBqa2NCTE53ZXBjVTZUMFljdz09",
         "2023-01-01 00:00:00",
