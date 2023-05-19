@@ -7,13 +7,13 @@ $radapter = new RAdapter($router, $_TEMPLATE_PUBLIC_PATH, $_ENV['HTTP_DOMAIN']);
  * ? El error a quedado solucionado
  */
 // HOME
-$radapter->getHTML('/index.php', 'home', fn () => middlewareSessionLogout(), function ($DATA) {
+$radapter->getHTML('/index.php', 'home', function ($DATA) {
     return [
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select()
     ];
 });
 
-$radapter->getHTML('/', 'home', fn () => middlewareSessionLogout(), function ($DATA) {
+$radapter->getHTML('/', 'home', function ($DATA) {
     return [
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select()
     ];
