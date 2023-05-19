@@ -23,21 +23,24 @@ class UserService
             if ($user) {
                 if ($user['user_user'] == $username and $user['user_pass'] == $password) {
                     $_SESSION['user_id'] = $user['user_id'];
-                    $_SESSION['user_nombre'] = $user['user_nombre'];
+                    $_SESSION['user_name'] = $user['user_name'];
                     $_SESSION['user_user'] = $user['user_user'];
-                    $_SESSION['user_foto'] = $user['user_foto'];
-                    $_SESSION['user_tipo'] = $user['user_tipo'];
+                    $_SESSION['user_photo'] = $user['user_photo'];
+                    $_SESSION['user_photo_url'] = $user['user_photo_url'];
                     $_SESSION['user_last'] = $user['user_last'];
                     $_SESSION['user_created'] = $user['user_created'];
-                    $result['status'] = 'success';
-                    $result['message'] = 'Bienvenido ' . $user['user_nombre'];
-                    $result['response'] = true;
-                    $result['data'] = $user;
+                    $result = [
+                        'status' => 'success',
+                        'message' => 'Bienvenido ' . $user['user_name'],
+                        'response' => true,
+                        'data' => $user
+                    ];
                 }
             }
             echo json_encode($result);
         }
     }
+
     public static function logout()
     {
         header('Content-Type: application/json');
@@ -51,6 +54,7 @@ class UserService
         ]);
         exit();
     }
+
     public static function select($DATA)
     {
         header('Content-Type: application/json');
@@ -65,6 +69,7 @@ class UserService
             'data' => $users
         ]);
     }
+
     public static function insert($DATA)
     {
         header('Content-Type: application/json');
@@ -77,36 +82,34 @@ class UserService
             'data' => null
         ];
         if (isset(
-            $_POST['user_nombre'],
-            $_POST['user_especialidad'],
+            $_POST['user_name'],
             $_POST['user_user'],
             $_POST['user_pass'],
-            $_POST['user_tipo']
         )) {
             $userDao = new UserDao($adapter);
-            $user_nombre = $_POST['user_nombre'];
-            $user_especialidad = $_POST['user_especialidad'];
+            $user_name = $_POST['user_name'];
             $user_user = $_POST['user_user'];
             $user_pass = $_POST['user_pass'];
-            $user_tipo = $_POST['user_tipo'];
-            $user_foto = "default.png";
-            if (isset($_FILES['user_foto'])) {
-                if ($_FILES['user_foto']['tmp_name'] != "" or $_FILES['user_foto']['tmp_name'] != null) {
-                    $user_foto = uploadFIle($_FILES['user_foto'], './public/img.users/');
+            $user_photo = "default.png";
+            if (isset($_FILES['user_photo'])) {
+                if ($_FILES['user_photo']['tmp_name'] != "" or $_FILES['user_photo']['tmp_name'] != null) {
+                    $user_photo = uploadFIle($_FILES['user_photo'], './public/img.users/');
                 }
             };
+
             $user = $userDao->insert(
-                $user_nombre,
-                $user_especialidad,
+                $user_name,
                 $user_user,
                 $user_pass,
-                $user_foto,
-                $user_tipo
+                $user_photo
             );
-            $result['status'] = 'success';
-            $result['message'] = 'Usuario insertado correctamente';
-            $result['response'] = true;
-            $result['data'] = $user;
+
+            $result = [
+                'status' => 'success',
+                'message' => 'Usuario ingresado correctamente',
+                'response' => true,
+                'data' => $user
+            ];
         }
         echo json_encode($result);
     }
@@ -123,11 +126,9 @@ class UserService
         ];
         if (isset(
             $_POST['user_id'],
-            $_POST['user_nombre'],
-            $_POST['user_especialidad'],
+            $_POST['user_name'],
             $_POST['user_user'],
-            $_POST['user_pass'],
-            $_POST['user_tipo']
+            $_POST['user_pass']
         )) {
             $userDao = new UserDao($adapter);
 
@@ -139,35 +140,34 @@ class UserService
                 exit();
             }
 
-            $user_nombre = $_POST['user_nombre'];
-            $user_especialidad = $_POST['user_especialidad'];
+            $user_name = $_POST['user_name'];
             $user_user = $_POST['user_user'];
             $user_pass = $_POST['user_pass'];
-            $user_tipo = $_POST['user_tipo'];
-            $user_foto = $current_user['user_foto'];
+            $user_photo = $current_user['user_photo'];
 
-            if (isset($_FILES['user_foto'])) {
-                if ($_FILES['user_foto']['tmp_name'] != "" or $_FILES['user_foto']['tmp_name'] != null) {
-                    if ($user_foto != 'default.png' && $user_foto != '1.png' && $user_foto != '2.png' && $user_foto != '') deleteFile('./public/img.users/' . $user_foto);
-                    $user_foto = uploadFIle($_FILES['user_foto'], './public/img.users/');
+            if (isset($_FILES['user_photo'])) {
+                if ($_FILES['user_photo']['tmp_name'] != "" or $_FILES['user_photo']['tmp_name'] != null) {
+                    if ($user_photo != 'default.png' && $user_photo != '') deleteFile('./public/img.users/' . $user_photo);
+                    $user_photo = uploadFIle($_FILES['user_photo'], './public/img.users/');
                 }
             }
             $user = $userDao->update(
                 $user_id,
-                $user_nombre,
-                $user_especialidad,
+                $user_name,
                 $user_user,
                 $user_pass,
-                $user_foto,
-                $user_tipo
+                $user_photo
             );
-            $result['status'] = 'success';
-            $result['message'] = 'Usuario actualizado correctamente';
-            $result['response'] = true;
-            $result['data'] = $user;
+            $result = [
+                'status' => 'success',
+                'message' => 'Usuario actualizado correctamente',
+                'response' => true,
+                'data' => $user
+            ];
         }
         echo json_encode($result);
     }
+
     public static function delete($DATA)
     {
         header('Content-Type: application/json');
@@ -188,13 +188,17 @@ class UserService
                 echo json_encode($result);
                 exit();
             }
-            if ($user['user_foto'] != 'default.png' && $user['user_foto'] != '1.png' && $user['user_foto'] != '2.png' && $user['user_foto'] != '') {
-                deleteFile('./public/img.users/' . $user['user_foto']);
+            if ($user['user_photo'] != 'default.png' && $user['user_photo'] != '') {
+                deleteFile('./public/img.users/' . $user['user_photo']);
             }
+
             $userDao->deleteById($user_id);
-            $result['status'] = 'success';
-            $result['message'] = 'Usuario eliminado correctamente';
-            $result['response'] = true;
+            $result = [
+                'status' => 'success',
+                'message' => 'Usuario eliminado correctamente',
+                'response' => true,
+                'data' => null
+            ];
         }
         echo json_encode($result);
     }

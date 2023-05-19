@@ -16,6 +16,16 @@ class InfoDao
         return $this->schematize($row);
     }
 
+    public function getAPI()
+    {
+        $resultset = ($this->mysqlAdapter)->query("SELECT * FROM info");
+        $row = mysqli_fetch_assoc($resultset);
+        return [
+            'api_url' => $row['info_mkw_api_url'],
+            'api_token' => $row['info_mkw_api_token']
+        ];
+    }
+
     // public function update(
     //     string $info_nombre,
     //     string $info_filosofia,

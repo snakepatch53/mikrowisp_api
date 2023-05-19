@@ -2,19 +2,42 @@
 class ApiAdapter
 {
     private $api_url;
-    private $api_user;
-    private $api_pass;
-    private $api_version;
+    private $api_token;
 
-    function __construct(
-        $api_url,
-        $api_user,
-        $api_pass,
-        $api_version = '6'
-    ) {
-        $this->api_url = $api_url;
-        $this->api_user = $api_user;
-        $this->api_pass = $api_pass;
-        $this->api_version = $api_version;
+    function __construct($API)
+    {
+        $this->api_url = $API['api_url'];
+        $this->api_token = $API['api_token'];
+    }
+
+    public function request(string $method, string $comand, array $data)
+    {
+        $URL = $this->api_url . $comand;
+        $postFields = array_merge(
+            [
+                "token" => $this->api_token
+            ],
+            $data
+        );
+
+        $curl = curl_init();
+        curl_setopt_array($curl, [
+            CURLOPT_URL => $URL,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => $method,
+            CURLOPT_POSTFIELDS => json_encode($postFields),
+            CURLOPT_HTTPHEADER => [
+                "Content-Type: application/json"
+            ],
+        ]);
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        curl_close($curl);
+        if ($err) return "cURL Error #:" . $err;
+        return json_decode($response, true);
     }
 }

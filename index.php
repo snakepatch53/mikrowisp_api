@@ -14,16 +14,22 @@ require_once __DIR__ . '/vendor/autoload.php';
 require_once(__DIR__ . '/src/functions/RouterAdapter.php');
 require_once(__DIR__ . '/src/functions/utils.php');
 require_once(__DIR__ . '/src/dao/MysqlAdapter.php');
+require_once(__DIR__ . '/src/api/ApiAdapter.php');
 require_once(__DIR__ . '/src/functions/middlewares.php');
 
 
 // cargamos los objetos de acceso a datos
 require_once('./src/dao/InfoDao.php');
 require_once('./src/dao/UserDao.php');
+require_once('./src/dao/ClientDao.php');
+
+// cargamos los objetos de acceso a API
+require_once('./src/api/ClientApi.php');
 
 // cargamos los servicios para el web service (WEB SERVICE)
 require_once('./src/services/info.service.php');
 require_once('./src/services/user.service.php');
+require_once('./src/services/client.service.php');
 
 // cargamos las variables de entorno
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
